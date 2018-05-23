@@ -6,4 +6,5 @@ addons:
 
 
 script:
-- elinks -dump-color-mode 4 -dump localhost
+- systemctl stop apache2
+- elinks -dump-color-mode 4 -dump http://localhost:80
