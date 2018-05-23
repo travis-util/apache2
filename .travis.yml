@@ -6,5 +6,5 @@ addons:
 
 
 script:
-- systemctl stop apache2
+- service apache2 status
 - elinks -dump-color-mode 4 -dump http://localhost:80
