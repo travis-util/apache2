@@ -1,6 +1,7 @@
 addons:
   apt:
     packages:
+    - apache2
     - apache2-suexec-pristine
     # - elinks
 
