@@ -9,7 +9,7 @@ addons:
 script:
 - |
   service apache2 status
-  if $? ; then
+  if [ 0 -eq $? ] ; then
     exit 1
   else
     exit 0
