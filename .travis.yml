@@ -7,5 +7,5 @@ addons:
 
 
 script:
-- service apache2 status
+- !(service apache2 status)
 # - elinks -dump-color-mode 4 -dump http://localhost:80
