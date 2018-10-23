@@ -3,10 +3,12 @@ addons:
     packages:
     - apache2
     - apache2-suexec-pristine
-    # - elinks
+    - elinks
 
 
 script:
+- service apache2 status
+- elinks -dump-color-mode 4 -dump http://localhost:80
 - |
   service apache2 status
   if [ 0 -eq $? ] ; then
@@ -14,4 +16,3 @@ script:
   else
     exit 0
   fi
-# - elinks -dump-color-mode 4 -dump http://localhost:80
